@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Results</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(139, 240, 99);
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgb(42, 173, 42);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Quiz Results</h2>
+    <p>Name: <span id="name"></span></p>
+    <p>Roll Number: <span id="rollNumber"></span></p>
+    <p>Batch: <span id="batch"></span></p>
+    <p>Section: <span id="section"></span></p>
+    <p>Quiz Topic: <span id="quizTopic"></span></p>
+    <p>Marks Obtained: <span id="marks"></span></p>
+</div>
+<script>
+    document.getElementById('name').textContent = sessionStorage.getItem('name');
+    document.getElementById('rollNumber').textContent = sessionStorage.getItem('rollNumber');
+    document.getElementById('batch').textContent = sessionStorage.getItem('batch');
+    document.getElementById('section').textContent = sessionStorage.getItem('section');
+    document.getElementById('quizTopic').textContent = 'JavaScript'; // Set your quiz topic here
+    document.getElementById('marks').textContent = sessionStorage.getItem('marks');
+</script>
+</body>
+</html>
